@@ -1,2 +1,3 @@
 # santa-sanda-stamp-rally
-kobespiralの三田市クイズラリーアプリケーション
+
+KobeSpiral の三田市クイズラリーアプリケーション
