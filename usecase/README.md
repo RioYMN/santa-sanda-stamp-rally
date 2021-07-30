@@ -4,8 +4,8 @@
 
 ## 2. ユースケース一覧
 ### 2.1.1 全ユーザ共通ユースケース
-1. [タスクのリスト表示]()
-1. [タスクのマップ表示]()
+1. [タスクのリスト表示](./show_tasklist.md)
+1. [タスクのマップ表示](./show_taskmap.md)
 1. [タスクの達成(クイズ)](./complete_task(quiz).md)
 1. [タスクの達成(スポット)](./complete_task(spot).md)
 1. [タスクの達成(謎解き)](./complete_task(mystery).md)
