@@ -1,0 +1,24 @@
+/*
+タグの可視化のためのものたち
+*/
+header{
+    height: 100px;
+    background-color: red;
+}
+
+main{
+    height: 200px;
+    background-color: orange;
+}
+
+footer
+.footer-nav{
+    height: 50px;
+    background-color: yellow;
+}
+.fotter-info{
+    height: 50px;
+    background-color: yellowgreen;
+}
+
+
