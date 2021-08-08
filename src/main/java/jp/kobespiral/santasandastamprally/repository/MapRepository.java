@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import jp.kobespiral.santasandastamprally.entity.Map;
 
+/**
+ * マップのリポジトリ
+ */
 @Repository
 public interface MapRepository extends CrudRepository<Map, Long> {
     // すべてのマップを取得

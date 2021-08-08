@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import jp.kobespiral.santasandastamprally.entity.Task;
 
+/**
+ * タスクのリポジトリ
+ */
 @Repository
 public interface TaskRepository extends CrudRepository<Task, Long> {
     // すべてのタスクを取得

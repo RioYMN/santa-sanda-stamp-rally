@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import jp.kobespiral.santasandastamprally.entity.Progress;
 
+/**
+ * 進捗のリポジトリ
+ */
 @Repository
 public interface ProgressRepository extends CrudRepository<Progress, Long> {
     // すべての進捗を取得

@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import jp.kobespiral.santasandastamprally.entity.Spot;
 
+/**
+ * スポットのリポジトリ
+ */
 @Repository
 public interface SpotRepository extends CrudRepository<Spot, Long> {
     // すべてのスポットを取得

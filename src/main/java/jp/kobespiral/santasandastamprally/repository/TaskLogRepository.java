@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import jp.kobespiral.santasandastamprally.entity.TaskLog;
 
+/**
+ * タスクログのリポジトリ
+ */
 @Repository
 public interface TaskLogRepository extends CrudRepository<TaskLog, Long> {
     // すべてのタスクログを取得

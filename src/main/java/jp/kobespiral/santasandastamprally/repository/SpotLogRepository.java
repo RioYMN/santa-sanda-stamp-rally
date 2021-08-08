@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import jp.kobespiral.santasandastamprally.entity.SpotLog;
 
+/**
+ * スポットログのリポジトリ
+ */
 @Repository
 public interface SpotLogRepository extends CrudRepository<SpotLog, Long> {
     // すべてのスポットログを取得

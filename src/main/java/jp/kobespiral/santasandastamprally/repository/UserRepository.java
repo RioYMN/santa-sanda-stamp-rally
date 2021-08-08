@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import jp.kobespiral.santasandastamprally.entity.User;
 
+/**
+ * ユーザのリポジトリ
+ */
 @Repository
 public interface UserRepository extends CrudRepository<User, UUID> {
     // すべてのユーザを取得
