@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.UUID;
 
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,11 +28,9 @@ public class Progress {
     @Column(name="progress_id", nullable=false)
     Long progressId; //進捗ID
 
-    @EmbeddedId
     @Column(name="map_id", nullable=false)
     Long mapId; // マップID
 
-    @EmbeddedId
     @Column(name="user_id", nullable=false)
     UUID userId; // ユーザID
 

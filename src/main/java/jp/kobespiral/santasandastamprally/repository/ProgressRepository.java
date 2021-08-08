@@ -18,5 +18,7 @@ public interface ProgressRepository extends CrudRepository<Progress, Long> {
     // 指定したユーザの，すべての進捗を取得
     List<Progress> findByUserId(UUID userId);
     // 指定したマップの，すべての進捗を取得
-    List<Progress> findByMapId(Long MapId);
+    List<Progress> findByMapId(Long mapId);
+    // 指定したユーザの，指定したマップの進捗を取得
+    Progress findByUserIdAndMapId(UUID userId, Long mapId);
 }
