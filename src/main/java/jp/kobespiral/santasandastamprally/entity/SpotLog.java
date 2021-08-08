@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.UUID;
 
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,19 +28,13 @@ public class SpotLog {
     @Column(name="spot_log_id", nullable=false)
     Long spotLogId; //スポットログID
 
-    @EmbeddedId
     @Column(name="spot_id", nullable=false)
     Long spotId; // スポットID
 
-    @EmbeddedId
     @Column(name="user_id", nullable=false)
     UUID userId; // ユーザID
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="created_at", nullable=false)
     Date createdAt; // 作成日時
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="updated_at", nullable=false)
-    Date updatedAt; // 最終更新日時
 }
