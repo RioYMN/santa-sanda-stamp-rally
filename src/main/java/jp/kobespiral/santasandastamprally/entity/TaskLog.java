@@ -43,7 +43,4 @@ public class TaskLog {
     @Column(name = "created_at", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     Date createdAt; // 作成日時
-
-    @Column(name = "created_by", nullable = false)
-    String createdBy; // 作成者
 }
