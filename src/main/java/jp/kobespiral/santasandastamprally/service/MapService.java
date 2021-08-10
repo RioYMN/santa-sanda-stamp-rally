@@ -33,7 +33,6 @@ public class MapService {
     * @return
     */
     public Map getMap(Long mapId) {
-        //Map map = mapRepo.findById(mapId);
         Map map = mapRepo.findById(mapId).orElseThrow();
         return map;
     }
@@ -65,14 +64,5 @@ public class MapService {
         Map map = getMap(mapId);
         mapRepo.delete(map);
     }
-
-    /**
-    * マップを削除する (D)
-    */
-    public void deleteMap(){
-
-    }
-
-
 
 }
