@@ -63,7 +63,7 @@ public class Task {
     String option3; // 選択肢3
 
     @Column(name="is_enabled", nullable=false)
-    boolean isEnabled; // 表示させるかどうか
+    Boolean isEnabled; // 表示させるかどうか
 
     @Column(name="created_at", nullable=false)
     Date createdAt; // 作成日時
