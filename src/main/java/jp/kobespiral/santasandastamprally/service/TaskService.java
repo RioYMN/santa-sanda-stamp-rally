@@ -1,5 +1,6 @@
 package jp.kobespiral.santasandastamprally.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,7 @@ public class TaskService {
     TaskRepository trepo;
 
     /**
-     * タスク登録のモックメソッド
-     * 実際は時間の登録などが必要
-     * TODO：dtoにsetDateを追加する
+     * タスク登録のメソッド
      * @param dto
      * @return
      */
@@ -104,8 +103,6 @@ public class TaskService {
 
     /**
      * taskの更新メソッド
-     * 中身は未実装
-     * TODO：dtoを作成する
      * @param dto
      * @return
      */
@@ -137,25 +134,35 @@ public class TaskService {
      * taskIdで指定してtaskの消去を行う
      * @param taskId
      */
-    public void deleteTask(Long taskId) {
-        trepo.deleteById(taskId);
+    public void deleteTask(Long taskId, Long deletedBy) {
+        Task task = getTask(taskId);
+        task.setDeletedAt(new Date());
+        task.setDeletedBy(deletedBy);
+        trepo.save(task);
     }
 
     /**
      * 全てのタスクを消去する
      */
-    public void deleteAllTask() {
-        trepo.deleteAll();
+    public void deleteAllTask(Long deletedBy) {
+        List<Task> list = getAllTask();
+        for(Task task : list) {
+            task.setDeletedAt(new Date());
+            task.setDeletedBy(deletedBy);
+            trepo.save(task);
+        }
     }
 
     /**
      * 特定のスポットに紐づくタスクを全て消去する
      * @param spotId
      */
-    public void deleteSpotTask(Long spotId) {
+    public void deleteSpotTask(Long spotId, Long deletedBy) {
         List<Task> list = getSpotTask(spotId);
         for (Task task : list) {
-            trepo.delete(task);
+            task.setDeletedAt(new Date());
+            task.setDeletedBy(deletedBy);
+            trepo.save(task);
         }
     }
 
