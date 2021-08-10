@@ -73,7 +73,7 @@ public class TaskLogService {
     }
 
     /**
-     * 指定したタスクの，正解したタスクのタスクログを取得する
+     * 指定したタスクの，達成したタスクのタスクログを取得する
      * @param taskId
      * @return
      */
