@@ -18,7 +18,7 @@ public class TaskLogDto {
     UUID userId;
 
     @NotNull
-    boolean isCorrect;
+    Boolean isCorrect;
 
     @NotNull
     String answer;
