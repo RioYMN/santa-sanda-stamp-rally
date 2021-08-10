@@ -1,5 +1,6 @@
 package jp.kobespiral.santasandastamprally.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,7 +63,9 @@ public class MapService {
     */
     public void deleteMap(Long mapId){
         Map map = getMap(mapId);
-        mapRepo.delete(map);
+        Date date = new Date();
+        map.setDeletedAt(date);
+        mapRepo.save(map);
     }
 
 }
