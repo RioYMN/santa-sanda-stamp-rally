@@ -43,20 +43,14 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     Date createdAt; // 作成日時
 
-    @Column(name="created_by", nullable=false)
-    Date createdBy; // 作成者
-
-    @Column(name="updated_at", nullable=true)
+    @Column(name="updated_at", nullable=false)
     @Temporal(TemporalType.TIMESTAMP)
     Date updatedAt; // 最終更新日時
-
-    @Column(name="updated_by", nullable=false)
-    Date updatedBy; // 最終更新者
 
     @Column(name="deleted_at", nullable=true)
     @Temporal(TemporalType.TIMESTAMP)
     Date deletedAt; // 削除日時
 
     @Column(name="deleted_by", nullable=true)
-    Date deletedBy; // 削除者
+    Long deletedBy; // 削除者
 }
