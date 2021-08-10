@@ -50,5 +50,5 @@ public class Progress {
     Date deletedAt; // 削除日時
 
     @Column(name="deleted_by", nullable=true)
-    Date deletedBy; // 削除者
+    Long deletedBy; // 削除者
 }
