@@ -63,23 +63,23 @@ public class Task {
     String option3; // 選択肢3
 
     @Column(name="is_enabled", nullable=false)
-    boolean isEnabled; // 表示させるかどうか
+    Boolean isEnabled; // 表示させるかどうか
 
     @Column(name="created_at", nullable=false)
     Date createdAt; // 作成日時
 
-    @Column(name="created_by", nullable=false)
-    Date createdBy; // 作成者
+    @Column(name="created_by", nullable=true)
+    Long createdBy; // 作成者
     
     @Column(name="updated_at", nullable=false)
     Date updatedAt; // 最終更新日時
 
-    @Column(name="updated_by", nullable=false)
-    Date updatedBy; // 最終更新者
+    @Column(name="updated_by", nullable=true)
+    Long updatedBy; // 最終更新者
 
     @Column(name="deleted_at", nullable=true)
     Date deletedAt; // 削除日時
 
     @Column(name="deleted_by", nullable=true)
-    Date deletedBy; // 削除者
+    Long deletedBy; // 削除者
 }

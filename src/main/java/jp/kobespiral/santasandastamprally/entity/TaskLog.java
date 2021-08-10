@@ -34,7 +34,7 @@ public class TaskLog {
     @Column(name = "user_id", nullable = false)
     UUID userId; // ユーザID
     
-    @Column(name = "is_correct", nullable = true)
+    @Column(name = "is_correct", nullable = false)
     Boolean isCorrect; // 正解フラグ
 
     @Column(name = "answer", nullable = true)
