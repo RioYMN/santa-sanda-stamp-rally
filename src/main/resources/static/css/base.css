@@ -1,19 +1,69 @@
-/*
-タグの可視化のためのものたち
-*/
-
-#header {
-    background-color: red;
+:root {
+    --theme-color: #CC0000;
+    --sub-theme-color: #FF0461;
+    --high-light-color: #FFFF33;
 }
 
-#main {
-    background-color: orange;
+body {
+    max-width: 1000px;
+    text-align: center;
 }
 
-#footer-nav {
-    background-color: yellow;
+/* -------- link -------- */
+
+nav ul {
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    text-align: center;
 }
 
-#footer-info {
-    background-color: yellowgreen;
+nav li {
+    display: table-cell;
+    min-width: 50px;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li:hover {
+    color: #E7DA66;
+    border-bottom: 3px solid #F0E475;
+    transition: .5s;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #555;
+    padding-bottom: 5px;
+    font-family: "Arial", "メイリオ";
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--high-light-color);
+    transition: .2s;
+}
+
+/* -------- header -------- */
+
+#header-nav {
+    padding: 10px;
+}
+
+/* -------- footer -------- */
+
+#footer {}
+
+#footer-adress {
+    font-size: 10px;
+    padding: 10px;
+}
+
+/* -------- map -------- */
+
+#map {
+    width: 700px;
+    height: 400px;
 }
