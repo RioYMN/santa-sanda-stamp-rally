@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" th:href="@{/css/base.css}" /> -->
+    <title>answer</title>
+</head>
+<body>
+    <header>
+        header
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <div class="progress">
+        </div>
+        <div class="answer">
+            <h1>[[${task.spot_id}]].[[${task.title}]]</h1>
+            <img th:src="@{${task.image_url}}" width="320px"> <br/>
+            <th><span>解　説</span></th>
+            <td>[[${task.explanation}]]</td>
+           
+        </div>
+        <p>
+            <a th:href=@{/}>HOME</a>
+            <a th:href=@{/}>シェアする</a>
+        </p>
+    </main>
+    <footer>
+        <nav class="footer-nav">
+            fottet-nav
+        </nav>
+        <div class="footer-info">
+            footer-info
+        </div>
+    </footer>
+</body>
+</html>

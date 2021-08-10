@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" th:href="@{/css/base.css}" /> -->
+    <title>Spot</title>
+</head>
+<body>
+    <header>
+        header
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <div class="progress">
+        </div>
+            <div class="spot">
+                <h1>[[${spot.spot_id}]].[[${spot.name}]]</h1>
+                <img th:src="@{${spot.image_url}}" width="320px">
+                <table>
+                    <tr>
+                        <th><span>住　所</span></th>
+                        <td>[[${spot.address}]]</td>
+                        <td><a th:href="@{/}">(map)未実装</td>
+                    </tr>
+                    <tr>
+                        <th><span>電話番号</span></th>
+                        <td>[[${spot.tel}]]</td>
+                    </tr>
+                    <tr>
+                        <th><span>営業時間</span></th>
+                        <td>[[${spot.businessHours}]]</td>
+                    </tr>
+                    <tr>
+                        <th><span>H P</span></th>
+                        <td><a th:href="@{${spot.HP}}">[[${spot.HP}]]</td>
+                    </tr>
+                    <tr>
+                        <th><span>備　考</span></th>
+                        <td>[[${spot.remark}]]</td>
+                    </tr>
+                </table>
+                [[${spot.description}]]
+            </div> 
+        </div>
+        <p>
+            <a th:href=@{/}>HOME</a>
+            <a th:href=@{/}>更新</a>
+            <a th:href=@{/task}>問題を見る</a>
+        </p>
+    </main>
+    <footer>
+        <nav class="footer-nav">
+            fottet-nav
+        </nav>
+        <div class="footer-info">
+            footer-info
+        </div>
+    </footer>
+</body>
+</html>
