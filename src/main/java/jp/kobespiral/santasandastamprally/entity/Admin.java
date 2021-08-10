@@ -1,14 +1,14 @@
 package jp.kobespiral.santasandastamprally.entity;
 
 import java.util.Date;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
@@ -16,24 +16,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * ユーザのエンティティ
+ * 管理者のエンティティ
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class User {
-    @Column(name="user_id", nullable=false)
+public class Admin {
+    @Column(name="admin_id", nullable=false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    UUID userId;   //ユーザID
+    Long adminId;   //管理者ID
 
     @Column(name="name", nullable=true)
     @NotBlank
     String name; // 名前
-
-    @Column(name="email", nullable=true)
-    @Email
-    String email; // E-mail
 
     @Column(name="last_login_at", nullable=false)
     @Temporal(TemporalType.TIMESTAMP)
