@@ -22,7 +22,6 @@
             <th><span>問題</span></th>
             <td>[[${task.description}]]</td>
             <span th:if="${taskchoise==1}">
-                <h2>謎解き</h2>
                 <div class="inputBox">
                     <form method="get" action="/task/answered">
                         <div>
@@ -33,7 +32,6 @@
                 </div>
             </span>
             <span th:if="${taskchoise==0}">
-                <h2>クイズ</h2>
                 <div class="inputBox">
                 <form method="get" action="/task/answered">
                     <div th:each="item : ${radioGender}">
