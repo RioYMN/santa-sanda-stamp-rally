@@ -51,7 +51,7 @@ public class Map {
     Date endDate; // イベントの終了日時
 
     @Column(name="is_enabled", nullable=false)
-    boolean isEnabled; // 表示させるかどうか
+    Boolean isEnabled; // 表示させるかどうか
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="created_at", nullable=false)
