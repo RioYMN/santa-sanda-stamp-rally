@@ -19,4 +19,6 @@ public interface SpotLogRepository extends CrudRepository<SpotLog, Long> {
     List<SpotLog> findBySpotId(Long spotId);
     // 指定したユーザの，すべてのスポットログを取得
     List<SpotLog> findByUserId(UUID userId);
+    // 指定したスポットの，指定したユーザのスポットログを取得
+    List<SpotLog> findBySpotIdAndUserId(Long spotId, UUID userId);
 }
